@@ -1,0 +1,59 @@
+services:
+  #API
+  card-transfer-api:
+    build:
+      context: deploy
+      dockerfile: Dockerfile
+    image: card-transfer-service:latest
+    container_name: card-transfer-api
+    ports:
+      - "5500:5500"
+    environment:
+      SERVER_PORT: 5500
+      SPRING_DATASOURCE_URL: jdbc:h2:file:/data/transferdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL;DB_CLOSE_ON_EXIT=FALSE
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: ""
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      H2_CONSOLE_ENABLED: "true"
+      TRANSFER_LOG_FILE: /logs/transfer.log
+    volumes:
+      - transfer-data:/data
+      - transfer-logs:/logs
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:5500/actuator/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - transfer-network
+
+  # Frontend (React)
+  frontend:
+    image: node:18-alpine
+    container_name: card-transfer-frontend
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_API_URL: https://serp-ya.github.io/card-transfer/
+      CI: "false"
+    volumes:
+      - ../card-transfer:/app
+    command: >
+      sh -c "npm install && npm start"
+    depends_on:
+      - card-transfer-api
+    restart: unless-stopped
+    networks:
+      - transfer-network
+
+volumes:
+  transfer-data:
+    driver: local
+  transfer-logs:
+    driver: local
+
+networks:
+  transfer-network:
+    driver: bridge
