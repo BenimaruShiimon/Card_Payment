@@ -1,0 +1,105 @@
+2026-04-18 18:31:31.992 [main] INFO  c.g.b.c.CardPaymentApplicationTests - Starting CardPaymentApplicationTests using Java 25 with PID 10932 (started by User in E:\MyProjects\CardPayment)
+2026-04-18 18:31:31.996 [main] INFO  c.g.b.c.CardPaymentApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-04-18 18:31:35.630 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-18 18:31:35.943 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:transferdb user=SA
+2026-04-18 18:31:35.946 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-18 18:31:35.997 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-18 18:31:38.464 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-18 18:31:39.765 [main] INFO  c.g.b.c.CardPaymentApplicationTests - Started CardPaymentApplicationTests in 8.635 seconds (process running for 11.139)
+2026-04-18 18:31:43.317 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: 5b087b4f-a41f-4239-8caf-24dd0404912a
+2026-04-18 18:31:43.322 [main] ERROR c.g.b.c.service.TransferService - Пустой код подтверждения для операции: 5b087b4f-a41f-4239-8caf-24dd0404912a
+2026-04-18 18:31:43.324 [main] ERROR c.g.b.c.service.TransferService - Ошибка подтверждения операции 5b087b4f-a41f-4239-8caf-24dd0404912a: Неверный код подтверждения
+2026-04-18 18:31:43.337 [main] ERROR c.g.b.c.service.TransferService - Operation ID is null or empty
+2026-04-18 18:31:43.345 [main] ERROR c.g.b.c.service.TransferService - Operation ID is null or empty
+2026-04-18 18:31:43.355 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: a1260d7b-5507-477a-aa9a-613a56dbf07b
+2026-04-18 18:31:43.355 [main] ERROR c.g.b.c.service.TransferService - Пустой код подтверждения для операции: a1260d7b-5507-477a-aa9a-613a56dbf07b
+2026-04-18 18:31:43.356 [main] ERROR c.g.b.c.service.TransferService - Ошибка подтверждения операции a1260d7b-5507-477a-aa9a-613a56dbf07b: Неверный код подтверждения
+2026-04-18 18:31:43.366 [main] WARN  c.g.b.c.service.TransferService - Неверные данные карты: 1111111111111111
+2026-04-18 18:31:43.366 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Неверные данные карты
+2026-04-18 18:31:43.372 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: 8be88154-2c8a-40b1-91d6-9995f893f695
+2026-04-18 18:31:43.373 [main] INFO  c.g.b.c.service.TransferService - Транзакция проведена: 1000 1111111111111111 → 2222222222222222
+2026-04-18 18:31:43.374 [main] INFO  c.g.b.c.service.TransferService - Операция подтверждена и завершена: 8be88154-2c8a-40b1-91d6-9995f893f695
+2026-04-18 18:31:43.381 [main] ERROR c.g.b.c.service.TransferService - Операция не найдена: invalid-id
+2026-04-18 18:31:43.381 [main] ERROR c.g.b.c.service.TransferService - Ошибка подтверждения операции invalid-id: Операция не найдена
+2026-04-18 18:31:43.390 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: f497670f-a758-49b0-806f-413aa66c94a8
+2026-04-18 18:31:43.391 [main] INFO  c.g.b.c.service.TransferService - Транзакция проведена: 1000 1111111111111111 → 2222222222222222
+2026-04-18 18:31:43.392 [main] INFO  c.g.b.c.service.TransferService - Операция подтверждена и завершена: f497670f-a758-49b0-806f-413aa66c94a8
+2026-04-18 18:31:43.402 [main] ERROR c.g.b.c.service.TransferService - Карта отправителя не найдена в базе данных: 1111111111111111
+2026-04-18 18:31:43.402 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Карта отправителя не найдена
+2026-04-18 18:31:43.409 [main] ERROR c.g.b.c.service.TransferService - Карта получателя не найденав базе данных: 2222222222222222
+2026-04-18 18:31:43.409 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Карта получателя не найдена
+2026-04-18 18:31:43.414 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: 4aad2c58-6de6-4fa1-9689-6533dc4e6d66
+2026-04-18 18:31:43.423 [main] WARN  c.g.b.c.service.TransferService - Недостаточно средств: карта 1111111111111111, баланс 100, требуется 1010.00
+2026-04-18 18:31:43.423 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Недостаточно средств
+2026-04-18 18:31:43.480 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-18 18:31:43.485 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-18 18:52:28.061 [main] INFO  c.g.b.c.CardPaymentApplicationTests - Starting CardPaymentApplicationTests using Java 25 with PID 15076 (started by User in E:\MyProjects\CardPayment)
+2026-04-18 18:52:28.064 [main] INFO  c.g.b.c.CardPaymentApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-04-18 18:52:31.814 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-18 18:52:32.107 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:transferdb user=SA
+2026-04-18 18:52:32.110 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-18 18:52:32.155 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-18 18:52:34.961 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-18 18:52:36.253 [main] INFO  c.g.b.c.CardPaymentApplicationTests - Started CardPaymentApplicationTests in 8.982 seconds (process running for 11.242)
+2026-04-18 18:52:39.106 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: 70ec2f8c-e53d-4ac1-9636-7112447aa003
+2026-04-18 18:52:39.112 [main] ERROR c.g.b.c.service.TransferService - Пустой код подтверждения для операции: 70ec2f8c-e53d-4ac1-9636-7112447aa003
+2026-04-18 18:52:39.114 [main] ERROR c.g.b.c.service.TransferService - Ошибка подтверждения операции 70ec2f8c-e53d-4ac1-9636-7112447aa003: Неверный код подтверждения
+2026-04-18 18:52:39.131 [main] ERROR c.g.b.c.service.TransferService - Operation ID is null or empty
+2026-04-18 18:52:39.143 [main] ERROR c.g.b.c.service.TransferService - Operation ID is null or empty
+2026-04-18 18:52:39.151 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: 2574082b-23a7-4b3c-9e52-4a16e33e4299
+2026-04-18 18:52:39.153 [main] ERROR c.g.b.c.service.TransferService - Пустой код подтверждения для операции: 2574082b-23a7-4b3c-9e52-4a16e33e4299
+2026-04-18 18:52:39.153 [main] ERROR c.g.b.c.service.TransferService - Ошибка подтверждения операции 2574082b-23a7-4b3c-9e52-4a16e33e4299: Неверный код подтверждения
+2026-04-18 18:52:39.163 [main] WARN  c.g.b.c.service.TransferService - Неверные данные карты: 1111111111111111
+2026-04-18 18:52:39.164 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Неверные данные карты
+2026-04-18 18:52:39.172 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: a8630423-527f-4098-87d7-c801e20b84f8
+2026-04-18 18:52:39.174 [main] INFO  c.g.b.c.service.TransferService - Транзакция проведена: 1000 1111111111111111 → 2222222222222222
+2026-04-18 18:52:39.175 [main] INFO  c.g.b.c.service.TransferService - Операция подтверждена и завершена: a8630423-527f-4098-87d7-c801e20b84f8
+2026-04-18 18:52:39.185 [main] ERROR c.g.b.c.service.TransferService - Операция не найдена: invalid-id
+2026-04-18 18:52:39.186 [main] ERROR c.g.b.c.service.TransferService - Ошибка подтверждения операции invalid-id: Операция не найдена
+2026-04-18 18:52:39.196 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: da122e13-1b5f-489e-bc0d-29e6bc7540be
+2026-04-18 18:52:39.198 [main] INFO  c.g.b.c.service.TransferService - Транзакция проведена: 1000 1111111111111111 → 2222222222222222
+2026-04-18 18:52:39.199 [main] INFO  c.g.b.c.service.TransferService - Операция подтверждена и завершена: da122e13-1b5f-489e-bc0d-29e6bc7540be
+2026-04-18 18:52:39.211 [main] ERROR c.g.b.c.service.TransferService - Карта отправителя не найдена в базе данных: 1111111111111111
+2026-04-18 18:52:39.212 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Карта отправителя не найдена
+2026-04-18 18:52:39.221 [main] ERROR c.g.b.c.service.TransferService - Карта получателя не найденав базе данных: 2222222222222222
+2026-04-18 18:52:39.221 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Карта получателя не найдена
+2026-04-18 18:52:39.232 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: 71be278f-1fdc-4ad3-836a-4dedc04fe2b8
+2026-04-18 18:52:39.244 [main] WARN  c.g.b.c.service.TransferService - Недостаточно средств: карта 1111111111111111, баланс 100, требуется 1010.00
+2026-04-18 18:52:39.244 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Недостаточно средств
+2026-04-18 18:52:39.317 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-18 18:52:39.321 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-04-18 19:09:28.343 [main] INFO  c.g.b.c.CardPaymentApplicationTests - Starting CardPaymentApplicationTests using Java 25 with PID 18360 (started by User in E:\MyProjects\CardPayment)
+2026-04-18 19:09:28.347 [main] INFO  c.g.b.c.CardPaymentApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-04-18 19:09:34.103 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-18 19:09:34.918 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:transferdb user=SA
+2026-04-18 19:09:34.925 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-18 19:09:35.045 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-18 19:09:38.607 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-18 19:09:40.145 [main] INFO  c.g.b.c.CardPaymentApplicationTests - Started CardPaymentApplicationTests in 12.756 seconds (process running for 15.105)
+2026-04-18 19:09:43.550 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: 7cd3c7c3-540a-4f67-bace-af8667f9f236
+2026-04-18 19:09:43.557 [main] ERROR c.g.b.c.service.TransferService - Пустой код подтверждения для операции: 7cd3c7c3-540a-4f67-bace-af8667f9f236
+2026-04-18 19:09:43.559 [main] ERROR c.g.b.c.service.TransferService - Ошибка подтверждения операции 7cd3c7c3-540a-4f67-bace-af8667f9f236: Неверный код подтверждения
+2026-04-18 19:09:43.578 [main] ERROR c.g.b.c.service.TransferService - Operation ID is null or empty
+2026-04-18 19:09:43.585 [main] ERROR c.g.b.c.service.TransferService - Operation ID is null or empty
+2026-04-18 19:09:43.595 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: c1c5cdbb-5bf8-4b62-a472-3656a0d1ee81
+2026-04-18 19:09:43.596 [main] ERROR c.g.b.c.service.TransferService - Пустой код подтверждения для операции: c1c5cdbb-5bf8-4b62-a472-3656a0d1ee81
+2026-04-18 19:09:43.597 [main] ERROR c.g.b.c.service.TransferService - Ошибка подтверждения операции c1c5cdbb-5bf8-4b62-a472-3656a0d1ee81: Неверный код подтверждения
+2026-04-18 19:09:43.606 [main] WARN  c.g.b.c.service.TransferService - Неверные данные карты: 1111111111111111
+2026-04-18 19:09:43.607 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Неверные данные карты
+2026-04-18 19:09:43.614 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: c0599990-248c-4973-a846-31015c16da01
+2026-04-18 19:09:43.615 [main] INFO  c.g.b.c.service.TransferService - Транзакция проведена: 1000 1111111111111111 → 2222222222222222
+2026-04-18 19:09:43.617 [main] INFO  c.g.b.c.service.TransferService - Операция подтверждена и завершена: c0599990-248c-4973-a846-31015c16da01
+2026-04-18 19:09:43.628 [main] ERROR c.g.b.c.service.TransferService - Операция не найдена: invalid-id
+2026-04-18 19:09:43.629 [main] ERROR c.g.b.c.service.TransferService - Ошибка подтверждения операции invalid-id: Операция не найдена
+2026-04-18 19:09:43.637 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: f66c6c82-ab51-4251-9420-467e43671c79
+2026-04-18 19:09:43.638 [main] INFO  c.g.b.c.service.TransferService - Транзакция проведена: 1000 1111111111111111 → 2222222222222222
+2026-04-18 19:09:43.640 [main] INFO  c.g.b.c.service.TransferService - Операция подтверждена и завершена: f66c6c82-ab51-4251-9420-467e43671c79
+2026-04-18 19:09:43.649 [main] ERROR c.g.b.c.service.TransferService - Карта отправителя не найдена в базе данных: 1111111111111111
+2026-04-18 19:09:43.649 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Карта отправителя не найдена
+2026-04-18 19:09:43.657 [main] ERROR c.g.b.c.service.TransferService - Карта получателя не найденав базе данных: 2222222222222222
+2026-04-18 19:09:43.658 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Карта получателя не найдена
+2026-04-18 19:09:43.664 [main] INFO  c.g.b.c.service.TransferService - Операция инициирована: f8172dc7-d424-4f04-91b7-9a2fe9bdc876
+2026-04-18 19:09:43.674 [main] WARN  c.g.b.c.service.TransferService - Недостаточно средств: карта 1111111111111111, баланс 100, требуется 1010.00
+2026-04-18 19:09:43.675 [main] ERROR c.g.b.c.service.TransferService - Ошибка инициации операции: Недостаточно средств
+2026-04-18 19:09:43.833 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-04-18 19:09:43.931 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
